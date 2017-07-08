@@ -44,7 +44,7 @@ gulp.task('css', ['sass'], function() {
 		'src/css/app.css'
 	])
 	.pipe(concat('style.css'))
-	.pipe(gulp.dest('./'))
+	.pipe(gulp.dest('./css/'))
 });
 
 gulp.task('minify-css', function() {
