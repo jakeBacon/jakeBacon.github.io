@@ -1,0 +1,62 @@
+@keyframes centering {
+    from {
+        left: 0;
+        width: 1px;
+    }
+
+    to {
+        left: 100%;
+        width: 15px;
+    }
+}
+
+body {
+    margin: auto;
+    overflow: hidden;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.stroke {
+    height: 1000px;
+    background-color: black;
+
+    &__container {
+        position: relative;
+        float: left;
+        display: inline-block;
+        width: 50%;
+        height: inherit;
+    }
+
+    &__container--right {
+        transform: rotate(180deg);
+    }
+
+    &__element {
+        animation-name: centering;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.59, 0.17, 0.86, 0.34);
+        position: absolute;
+        height: 100%;
+        background-color: white;
+    }
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        width: 250px;
+        margin: auto -125px;
+    }
+
+    &__content-tba {
+        color: white;
+        letter-spacing: 7px;
+        font-size: 12px;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: lowercase;
+    }
+}
